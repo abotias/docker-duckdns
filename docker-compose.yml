@@ -1,0 +1,12 @@
+version: "2.1"
+services:
+  duckdns:
+    image: abotias/duckdns:0.7.5
+    container_name: duckdns
+    environment:
+      - PUID=1000 #optional
+      - PGID=1000 #optional
+      - TZ=Europe/Madrid
+      - DDNSDOMAIN=
+      - DDNSTOKEN=
+    restart: unless-stopped
